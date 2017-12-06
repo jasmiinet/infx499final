@@ -1,4 +1,7 @@
 
+import static java.util.Calendar.*;
+
+
 public class DateUtility {
     public static boolean isLeapYear(int year){
         return (year%4 == 0 && year%100 != 0) || year%400 == 0;
@@ -25,6 +28,15 @@ public class DateUtility {
             ordinal += daysIn(m,year);
         return ordinal +day;
         
+    }
+    
+    public static String americanFormat(int month,int day,int year){
+        return month+"/"+day+"/"+year;
+    }
+    
+    
+    public static String europeanFormat(int month,int day,int year){
+        return day+"/"+month+"/"+year;
     }
     
 
