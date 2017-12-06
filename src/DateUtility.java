@@ -19,9 +19,14 @@ public class DateUtility {
                return 28 + (isLeapYear(year)?1:0);
     }
     
-    public static ordinalDate(int month, int day, int year){
+    public static int ordinalDate(int month, int day, int year){
+        int ordinal =0 ;
+        for (int m = JANUARY;m<month;m++)
+            ordinal += daysIn(m,year);
+        return ordinal +day;
         
     }
+    
 
 }
 
